@@ -1,0 +1,327 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* 點擊超鏈接將高亮效果設置為透明 */
+
+
+/* 去除按鈕的原生樣式 */
+
+
+/* 禁用長按頁面時的彈出菜單 */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+
+img,
+a {
+    -webkit-touch-callout: none;
+}
+
+
+/*    雙偽元素清除浮動，父級添加class="clearfix"   */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.app {
+    height: 45px;
+}
+
+.app ul li {
+    float: left;
+    height: 45px;
+    background-color: #232326;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+}
+
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+
+.app ul li:nth-child(1) img {
+    width: 10px;
+    vertical-align: middle;
+}
+
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+
+.app ul li:nth-child(2) img {
+    /* 圖片需要和文字居中對齊，vertical-align: middle */
+    width: 35px;
+    vertical-align: middle;
+}
+
+.app ul li:nth-child(3) {
+    width: 57%;
+}
+
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: #cd2525;
+}
+
+
+/* 搜索 */
+
+.search-wrap {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 44px;
+    min-width: 320px;
+    max-width: 640px;
+    z-index: 9999;
+}
+
+.search-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 44px;
+    width: 44px;
+}
+
+.search-btn::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 18px;
+    margin: 14px 0 0 18px;
+    background: url(../images/s-btn.png) no-repeat;
+    background-size: 20px 18px;
+}
+
+.search-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 44px;
+    width: 44px;
+    color: #fff;
+    line-height: 44px;
+}
+
+.search {
+    position: relative;
+    height: 30px;
+    margin: 0 50px;
+    margin-top: 7px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.jd-icon {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    left: 13px;
+    top: 8px;
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+}
+
+.jd-icon::after {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+}
+
+.sou {
+    top: 8px;
+    left: 50px;
+    position: absolute;
+    width: 18px;
+    height: 15px;
+    background-color: pink;
+    /* 二倍精靈圖图做法 ：*/
+    /* 1.先把精靈圖等比例縮放原來的一半 */
+    /* 2.之後測量坐標 */
+    /* 3.注意要添加background-size，大小設置爲原來的一半 */
+    background: url(../images/jd-sprites.png) -121px 0;
+    background-size: 200px auto;
+}
+
+
+/* 滑動圖 */
+
+.slider {
+    position: relative;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+    background-size: 50%;
+}
+
+.swiper .swiper-pagination-bullet {
+    background-color: #fff;
+}
+
+
+/* 小家電 */
+
+.brand {
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.brand div {
+    float: left;
+    width: 33.33%;
+}
+
+.brand div img {
+    width: 100%;
+}
+
+
+/* 導航欄 */
+
+nav {
+    padding-top: 5px;
+}
+
+nav a {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+nav a img {
+    width: 40px;
+    margin: 10px 0;
+}
+
+nav a span {
+    display: block;
+    font-size: 16px;
+}
+
+
+/* 新聞 */
+
+.news {
+    padding-top: 10px;
+}
+
+.news a {
+    float: left;
+    box-sizing: border-box;
+}
+
+.news a img {
+    width: 100%;
+}
+
+.news a:nth-child(1) {
+    width: 50%;
+}
+
+
+/* .news a:nth-child(2),
+.news a:nth-child(3)*/
+
+.news a:nth-child(n+2) {
+    width: 25%;
+    border-left: 1px solid #ccc;
+}
+
+
+/* 今日推薦 */
+
+.recommend {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.today {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.recommend span {
+    color: #ccc;
+}
+
+.recommend img {
+    width: 100%;
+}
